@@ -18,7 +18,7 @@ mongoose.connect(url, {
     useNewUrlParser: true
 });
 
-//require(".config/passport")(passport);
+require(".config/passport")(passport);
 
 //settings
 app.set("port", process.env.PORT || 3000  );
@@ -43,8 +43,6 @@ app.use(flash());
 //routes
 
 require("./app/routes")(app, passport);
-
-
 
 //static files
 
